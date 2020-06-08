@@ -21,7 +21,7 @@ class PlayingCard {
             if (this.state == 0) {
                 this.element.src = this.img
                 this.state = 1
-            } else if (this.state == 1) {
+            } else {
                 this.element.src = 'img/back.png'
                 this.state = 0
             }
@@ -45,7 +45,7 @@ function createCardImage() {
     - return the img
     */
     const img = document.createElement('img')
-    img.surc = 'img/back.png'
+    img.src = 'img/back.png'
     return img
 }
 
@@ -56,8 +56,7 @@ function displayDeck() {
     - Use a forEach with an arrow function
     */
     deck.forEach(card => {
-        container.appendChild(card.element
-        )
+        container.appendChild(card.element)
     })
 }
 // for loop that sorts the deck using math.random
